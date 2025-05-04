@@ -1,0 +1,14 @@
+{
+  "name": "refactor-yourself-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Teriz De Ocampo",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.15.3"
+  }
+}
