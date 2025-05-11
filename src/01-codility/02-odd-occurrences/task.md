@@ -45,7 +45,7 @@ Write an **efficient** algorithm for the following assumptions:
 <table>
   <tr>
     <th>Score</th>
-    <td style="color : yellow">66%</td>
+    <td>66%</td>
   </tr>
   <tr>
     <th>Time Complexity</th>
@@ -65,7 +65,7 @@ Write an **efficient** algorithm for the following assumptions:
 <table>
   <tr>
     <th>Score</th>
-    <td style="color : yellowgreen">100%</td>
+    <td>100%</td>
   </tr>
   <tr>
     <th>Time Complexity</th>
@@ -76,3 +76,50 @@ Write an **efficient** algorithm for the following assumptions:
     <td><code>O(n)</code></td>
   </tr>
 </table>
+
+## [Solution v3](./v3.ts)
+
+<table>
+  <tr>
+    <th>Score</th>
+    <td>100%</td>
+  </tr>
+  <tr>
+    <th>Time Complexity</th>
+    <td><code>O(n)</code></code></td>
+  </tr>
+  <tr>
+    <th>Space Complexity</th>
+    <td><code>O(1)</code></td>
+  </tr>
+</table>
+
+### Key Properties of `XOR`
+
+1. `a ^ a = 0` → XORing a number with itself results in 0.
+2. `a ^ b = a` → XORing a number with 0 returns the number.
+3. XOR is commutative and associative → the order does not matter.
+
+So, when you XOR all elements in the array:
+
+- Every number that appears twice cancels itself out (e.g., `9 ^ 9 = 0`, `3 ^ 3` = 0)
+- The number that appears only once remains at the end, because `0 ^ x = x`.
+
+### Walkthrough
+
+If we have:
+
+```typescript
+A = [9, 3, 9, 3, 9, 7, 9];
+```
+
+Then:
+
+```
+9 ^ 3 = 10
+10 ^ 9 = 3
+3 ^ 3 = 0
+0 ^ 9 = 9
+9 ^ 7 = 14
+14 ^ 9 = 7
+```
