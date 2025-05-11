@@ -1,6 +1,6 @@
 import readline from "node:readline";
 
-export default function solution(n: number) {
+export default function solution(n: number): number {
   const binary = n.toString(2);
 
   let startIndex: number | null = null;
