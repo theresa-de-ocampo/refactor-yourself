@@ -1,5 +1,11 @@
 # JavaScript
 
+## Mistakes
+
+### I. Binary (V1)
+
+- It does not work for `328`, and `805306373`
+
 ## Jest Issues with TypeScript ESM
 
 There are no unit tests for now. Jest does currently does not support `Node16`.
